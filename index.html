@@ -7,46 +7,82 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
-        .header { background: rgba(255,255,255,0.1); padding: 20px; text-align: center; }
-        .videos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
-        .video-card { background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
-        video { width: 100%; height: 200px; object-fit: cover; }
-        .info { padding: 15px; }
-        h3 { margin-bottom: 10px; }
-        .watch-btn { background: #ff6b6b; color: white; border: none; padding: 10px; width: 100%; border-radius: 5px; cursor: pointer; }
-        .no-videos { text-align: center; padding: 50px; }
+        body { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: white; 
+            padding: 20px; 
+        }
+        .header { 
+            text-align: center; 
+            padding: 40px; 
+            background: rgba(255,255,255,0.1); 
+            border-radius: 15px; 
+            margin-bottom: 30px; 
+        }
+        h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .videos-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            gap: 20px; 
+        }
+        .video-card { 
+            background: rgba(255,255,255,0.1); 
+            border-radius: 10px; 
+            overflow: hidden; 
+        }
+        video { 
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+            background: black; 
+        }
+        .info { 
+            padding: 15px; 
+        }
+        h3 { 
+            margin-bottom: 10px; 
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>🎬 أكاديمية الفيديو</h1>
+        <p>جميع الفيديوهات متاحة للمشاهدة</p>
     </div>
-    <div class="videos-grid">
-        <!-- هنا هتتولد الفيديوهات تلقائيًا بعد ما نرفعها -->
+    
+    <div class="videos-grid" id="videoContainer">
+        <!-- الفيديوهات هتتضاف هنا -->
     </div>
+
     <script>
-        // هنجيب الفيديوهات من مجلد videos
-        const videos = [
-            // هتتعبأ تلقائيًا
+        // جلب الفيديوهات من مجلد videos
+        const videoFiles = [
+            '1771186952765_فيديو جديد.mp4',
+            '1771187776381_فرخخخ مطيع.mp4',
+            '1771187844033_ورع سعوودي سالب😋👄.mp4',
+            '1771188030855_لبن لبن اه اخخ💋.mp4',
+            '1771188164342_جماعي😘.mp4'
         ];
-        const grid = document.querySelector('.videos-grid');
-        if (videos.length > 0) {
-            videos.forEach(v => {
-                grid.innerHTML += `
-                    <div class="video-card">
-                        <video controls>
-                            <source src="videos/${v}" type="video/mp4">
-                        </video>
-                        <div class="info">
-                            <h3>${v.replace('.mp4', '')}</h3>
-                        </div>
-                    </div>
-                `;
-            });
-        } else {
-            grid.innerHTML = '<div class="no-videos"><i class="fas fa-film"></i><h2>لا توجد فيديوهات</h2></div>';
-        }
+
+        const container = document.getElementById('videoContainer');
+        
+        videoFiles.forEach(file => {
+            const videoCard = document.createElement('div');
+            videoCard.className = 'video-card';
+            
+            const title = file.replace('.mp4', '').replace(/^\d+_/, '');
+            
+            videoCard.innerHTML = `
+                <video controls>
+                    <source src="videos/${file}" type="video/mp4">
+                </video>
+                <div class="info">
+                    <h3>${title}</h3>
+                </div>
+            `;
+            
+            container.appendChild(videoCard);
+        });
     </script>
 </body>
 </html>
