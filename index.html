@@ -4,85 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أكاديمية الفيديو</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-            color: white; 
-            padding: 20px; 
-        }
-        .header { 
-            text-align: center; 
-            padding: 40px; 
-            background: rgba(255,255,255,0.1); 
-            border-radius: 15px; 
-            margin-bottom: 30px; 
-        }
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; }
+        .header { text-align: center; padding: 40px; background: rgba(255,255,255,0.1); border-radius: 15px; margin-bottom: 30px; }
         h1 { font-size: 2.5em; margin-bottom: 10px; }
-        .videos-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-            gap: 20px; 
-        }
-        .video-card { 
-            background: rgba(255,255,255,0.1); 
-            border-radius: 10px; 
-            overflow: hidden; 
-        }
-        video { 
-            width: 100%; 
-            height: 200px; 
-            object-fit: cover; 
-            background: black; 
-        }
-        .info { 
-            padding: 15px; 
-        }
-        h3 { 
-            margin-bottom: 10px; 
-        }
+        .videos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        .video-card { background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+        video { width: 100%; height: 200px; object-fit: cover; background: black; }
+        .info { padding: 15px; }
+        h3 { margin-bottom: 10px; }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>🎬 أكاديمية الفيديو</h1>
-        <p>جميع الفيديوهات متاحة للمشاهدة</p>
+        <p>جميع الفيديوهات متاحة للمشاهدة - تشغيل تلقائي</p>
     </div>
     
-    <div class="videos-grid" id="videoContainer">
-        <!-- الفيديوهات هتتضاف هنا -->
+    <div class="videos-grid">
+        <!-- الفيديو 1 -->
+        <div class="video-card">
+            <video controls autoplay muted loop>
+                <source src="videos/m_37029i7n70.mp4" type="video/mp4">
+            </video>
+            <div class="info">
+                <h3>فيديو 1</h3>
+            </div>
+        </div>
+        <!-- الفيديو 2 -->
+        <div class="video-card">
+            <video controls autoplay muted loop>
+                <source src="videos/m_37025c32h1.mp4" type="video/mp4">
+            </video>
+            <div class="info">
+                <h3>فيديو 2</h3>
+            </div>
+        </div>
+        <!-- الفيديو 3 -->
+        <div class="video-card">
+            <video controls autoplay muted loop>
+                <source src="videos/m_3702foml52.mp4" type="video/mp4">
+            </video>
+            <div class="info">
+                <h3>فيديو 3</h3>
+            </div>
+        </div>
+        <!-- الفيديو 4 -->
+        <div class="video-card">
+            <video controls autoplay muted loop>
+                <source src="videos/m_3702ysxpd3.mp4" type="video/mp4">
+            </video>
+            <div class="info">
+                <h3>فيديو 4</h3>
+            </div>
+        </div>
+        <!-- الفيديو 5 -->
+        <div class="video-card">
+            <video controls autoplay muted loop>
+                <source src="videos/m_37021trdr5.mp4" type="video/mp4">
+            </video>
+            <div class="info">
+                <h3>فيديو 5</h3>
+            </div>
+        </div>
+        <!-- الفيديو 6 -->
+        <div class="video-card">
+            <video controls autoplay muted loop>
+                <source src="videos/m_3702uwvm50.mp4" type="video/mp4">
+            </video>
+            <div class="info">
+                <h3>فيديو 6</h3>
+            </div>
+        </div>
+        <!-- الفيديو 7 -->
+        <div class="video-card">
+            <video controls autoplay muted loop>
+                <source src="videos/m_3702rosm90.mp4" type="video/mp4">
+            </video>
+            <div class="info">
+                <h3>فيديو 7</h3>
+            </div>
+        </div>
+        <!-- الفيديو 8 -->
+        <div class="video-card">
+            <video controls autoplay muted loop>
+                <source src="videos/m_3702hfqud1.mp4" type="video/mp4">
+            </video>
+            <div class="info">
+                <h3>فيديو 8</h3>
+            </div>
+        </div>
+        <!-- الفيديو 9 -->
+        <div class="video-card">
+            <video controls autoplay muted loop>
+                <source src="videos/m_3702a7nwo2.mp4" type="video/mp4">
+            </video>
+            <div class="info">
+                <h3>فيديو 9</h3>
+            </div>
+        </div>
+        <!-- الفيديو 10 -->
+        <div class="video-card">
+            <video controls autoplay muted loop>
+                <source src="videos/m_3702mdjes3.mp4" type="video/mp4">
+            </video>
+            <div class="info">
+                <h3>فيديو 10</h3>
+            </div>
+        </div>
+        <!-- الفيديو 11 -->
+        <div class="video-card">
+            <video controls autoplay muted loop>
+                <source src="videos/m_3702hncqf4.mp4" type="video/mp4">
+            </video>
+            <div class="info">
+                <h3>فيديو 11</h3>
+            </div>
+        </div>
+        <!-- أضف باقي الفيديوهات بنفس الطريقة -->
     </div>
-
-    <script>
-        // جلب الفيديوهات من مجلد videos
-        const videoFiles = [
-            '1771186952765_فيديو جديد.mp4',
-            '1771187776381_فرخخخ مطيع.mp4',
-            '1771187844033_ورع سعوودي سالب😋👄.mp4',
-            '1771188030855_لبن لبن اه اخخ💋.mp4',
-            '1771188164342_جماعي😘.mp4'
-        ];
-
-        const container = document.getElementById('videoContainer');
-        
-        videoFiles.forEach(file => {
-            const videoCard = document.createElement('div');
-            videoCard.className = 'video-card';
-            
-            const title = file.replace('.mp4', '').replace(/^\d+_/, '');
-            
-            videoCard.innerHTML = `
-                <video controls>
-                    <source src="videos/${file}" type="video/mp4">
-                </video>
-                <div class="info">
-                    <h3>${title}</h3>
-                </div>
-            `;
-            
-            container.appendChild(videoCard);
-        });
-    </script>
 </body>
 </html>
